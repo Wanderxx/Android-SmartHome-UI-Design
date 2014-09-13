@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:orientation="vertical"
+    tools:context="com.example.nitin.rockpapersissor.DrawGestureActivity$PlaceholderFragment">
+
+    <TextView
+        android:text="@string/draw_gesture_area"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="#330099"
+        android:layout_gravity="center_horizontal" />
+
+    <android.gesture.GestureOverlayView
+        android:id="@+id/gestures_draw"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight= "1.0"
+        android:gestureColor="#990000"
+        android:background="@android:color/darker_gray"
+            android:fadeEnabled="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Play Again"
+        android:id="@+id/button_play_again"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
