@@ -20,6 +20,33 @@
             android:name=".DrawGestureActivity"
             android:label="@string/title_activity_draw_gesture" >
         </activity>
+        <activity
+            android:name=".NotifyService"
+            android:label="@string/title_activity_notify_service" >
+        </activity>
+
+        <service
+            android:name=".NotifyService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name=".NotifyServiceActivity"
+            android:label="@string/title_activity_notify_service" >
+        </activity>
+        <activity
+            android:name=".NotificationSenderActivity"
+            android:label="@string/title_activity_notification_sender" >
+        </activity>
+        <activity
+            android:name=".NotificaitonReceiver"
+            android:label="@string/title_activity_notificaiton_receiver" >
+        </activity>
+        <activity
+            android:name=".NotificationReceiver"
+            android:label="@string/title_activity_notification_receiver" >
+        </activity>
     </application>
 
 </manifest>

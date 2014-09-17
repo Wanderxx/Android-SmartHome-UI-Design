@@ -27,4 +27,21 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Notify via service"
+        android:id="@+id/button_notify_service"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Notify"
+        android:id="@+id/button_notify"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/button_notify_service"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

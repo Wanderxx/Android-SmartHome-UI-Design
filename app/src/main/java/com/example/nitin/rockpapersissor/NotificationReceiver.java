@@ -9,15 +9,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
-
-public class MainActivity extends ActionBarActivity {
+public class NotificationReceiver extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_notification_receiver);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
@@ -29,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.notification_receiver, menu);
         return true;
     }
 
@@ -56,34 +55,11 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-
-
-            Button playButton=(Button)rootView.findViewById(R.id.button_play);
-            Button notifyViaServiceBUtton=(Button) rootView.findViewById(R.id.button_notify_service);
-            Button notifyButton=(Button)rootView.findViewById(R.id.button_notify);
-            notifyButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent notificationSenderActivityIntent= new Intent(getActivity(), NotificationSenderActivity.class);
-                    startActivity(notificationSenderActivityIntent);
-
-                }
-            });
-            notifyViaServiceBUtton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent notifyServiceActivity= new Intent(getActivity(), NotifyServiceActivity.class);
-                    startActivity(notifyServiceActivity);
-                }
-            });
-            playButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent drawGestureIntent = new Intent(getActivity(), DrawGestureActivity.class);
-                    startActivity(drawGestureIntent);
-                }
-            });
+            View rootView = inflater.inflate(R.layout.fragment_notification_receiver, container, false);
+            TextView notification=(TextView)rootView.findViewById(R.id.textView_notification);
+            Intent intent=getActivity().getIntent();
+            String message = (String)intent.getExtras().get(Intent.EXTRA_TEXT);
+                    notification.setText(message);
             return rootView;
         }
     }

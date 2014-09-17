@@ -50,11 +50,11 @@ public class MyGesturePerformedListener implements GestureOverlayView.OnGestureP
             }
             else if(predictionName.equals("rectangle"))
             {
-                userInput="Rectangle";
+                userInput="Paper";
             }
             else if(predictionName.equals("circle"))
             {
-                userInput="Circle";
+                userInput="Rock";
 
             }
             else
