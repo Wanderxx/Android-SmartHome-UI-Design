@@ -1,4 +1,0 @@
-totalHoney: 163 kg;
-still alive Bees: 0 bees;
-The time left: 75 S;
-Final Goals: 88.
